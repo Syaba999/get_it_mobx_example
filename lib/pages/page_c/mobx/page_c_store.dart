@@ -14,6 +14,8 @@ abstract class _PageCStore extends MobxBase with Store {
   final _navigator =
       InjectorService.getInjector.get<NavigationService>().navigator;
 
+  int get dataItemLength => _pageBStore.data.length;
+
   void addData(String dataItem) =>
       _pageBStore.addData("${_pageBStore.data.length} $dataItem");
 

@@ -12,11 +12,13 @@ abstract class _PageEStore extends MobxBase with Store {
 
   String errorText;
 
+  int get dataItemLength => _pageBStore.data.length;
+
   Future<void> fetchData() async {
     toLoadingState();
     await Future.delayed(Duration(seconds: 2));
-    final dataList =
-        List<String>.generate(10, (index) => "$index DATA FROM E PAGE");
+    final dataList = List<String>.generate(
+        10, (index) => "${dataItemLength + index} ITEM FROM E");
     _pageBStore.addListData(dataList);
     toSuccessState();
   }

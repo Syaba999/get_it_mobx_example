@@ -31,12 +31,13 @@ class PageE extends StatelessWidget {
               store.errorText,
               style: TextStyle(color: Theme.of(context).errorColor),
             ),
+          Text("DATA ITEM LENGTH ${store.dataItemLength}"),
           RaisedButton(
             child: Text("FETCH DATA FROM INTERNET"),
             onPressed: store.fetchData,
           ),
           RaisedButton(
-            child: Text("TO ERROR TEXT"),
+            child: Text("TO ERROR STATE"),
             onPressed: store.setErrorState,
           )
         ],

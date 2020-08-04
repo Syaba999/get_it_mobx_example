@@ -28,7 +28,7 @@ class PageB extends StatelessWidget {
           ),
           RaisedButton(
             child: Text("ADD ITEM TO LIST"),
-            onPressed: () => store.addData("${store.data.length} ITEM FROM A"),
+            onPressed: () => store.addData("${store.data.length} ITEM FROM B"),
           ),
           RaisedButton(
             child: Text("GO TO C PAGE"),

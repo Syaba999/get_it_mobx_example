@@ -20,9 +20,10 @@ class PageC extends StatelessWidget {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
+            Text("DATA ITEM LENGTH ${store.dataItemLength}"),
             RaisedButton(
               child: Text("ADD DATA ITEM TO B STORE"),
-              onPressed: () => store.addData("ITEM FROM C PAGE"),
+              onPressed: () => store.addData("ITEM FROM C"),
             ),
             RaisedButton(
               child: Text("GO TO E PAGE"),
